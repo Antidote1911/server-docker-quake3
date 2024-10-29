@@ -25,7 +25,7 @@ services:
           cpus: '0.5'
           memory: 128M
     volumes:
-      - '/mnt/Partage/Logiciels/quake/baseq3:/home/ioq3/.q3a/baseq3/:rw'
+      - '/mnt/Partage/Logiciels/q3a/baseq3:/home/ioq3/.q3a/baseq3/:rw'
     command: "+set dedicated 2 +exec configs/dm_server.cfg"
 
 # -- Team Deathmatch
@@ -44,7 +44,7 @@ services:
           cpus: '0.5'
           memory: 128M
     volumes:
-      - '/mnt/Partage/Logiciels/quake/baseq3:/home/ioq3/.q3a/baseq3/:rw'
+      - '/mnt/Partage/Logiciels/q3a/baseq3:/home/ioq3/.q3a/baseq3/:rw'
     command: "+set dedicated 2 +exec configs/tdm_server.cfg"
 
 # -- CTF
@@ -63,6 +63,6 @@ services:
           cpus: '0.5'
           memory: 128M
     volumes:
-      - '/mnt/Partage/Logiciels/quake/baseq3:/home/ioq3/.q3a/baseq3/:rw'
+      - '/mnt/Partage/Logiciels/q3a/baseq3:/home/ioq3/.q3a/baseq3/:rw'
     command: "+set dedicated 2 +exec configs/ctf_server.cfg"
 
