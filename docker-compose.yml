@@ -22,7 +22,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
+          cpus: '1'
           memory: 512M
     volumes:
       - '/mnt/Partage/Logiciels/q3a/baseq3:/home/ioq3/.q3a/baseq3/:rw'
@@ -41,7 +41,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
+          cpus: '1'
           memory: 512M
     volumes:
       - '/mnt/Partage/Logiciels/q3a/baseq3:/home/ioq3/.q3a/baseq3/:rw'
@@ -60,7 +60,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
+          cpus: '1'
           memory: 512M
     volumes:
       - '/mnt/Partage/Logiciels/q3a/baseq3:/home/ioq3/.q3a/baseq3/:rw'
