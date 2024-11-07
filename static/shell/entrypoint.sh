@@ -68,8 +68,8 @@ fi
 sync
 # -- action -- #
 _ARGS="+set fs_game cpma"
-_ARGS="${_ARGS} +exec ${GAME_CFG}"
 _ARGS="${_ARGS} +exec common.cfg"
+_ARGS="${_ARGS} +exec ${GAME_CFG}"
 _ARGS="${_ARGS} ${EXTRA_ARGS}"
 
 pinfo "setting permissions."
