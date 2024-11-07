@@ -1,0 +1,110 @@
+networks:
+  ioquake3:
+    external: false
+
+services:
+   ioquake3_ffa:
+    build:
+      context: .
+    container_name: ioquake3_ffa
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - MOTD
+      - RCON_PASS
+      - EXTRA_ARGS
+      - GAME_CFG=ffa.cfg
+    volumes:
+      - "${BASEQ3_DIR}:/quake/baseq3/:rw"
+      - "${CPMA_DIR}:/quake/cpma/:rw"
+      - "${CONFIG_DIR}:/config:rw"
+    ports:
+      - "27960:${PORT}"
+    networks:
+      - ioquake3
+      
+   ioquake3_tdm:
+    build:
+      context: .
+    container_name: ioquake3_tdm
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - MOTD
+      - RCON_PASS
+      - EXTRA_ARGS
+      - GAME_CFG=tdm.cfg
+    volumes:
+      - "${BASEQ3_DIR}:/quake/baseq3/:rw"
+      - "${CPMA_DIR}:/quake/cpma/:rw"
+      - "${CONFIG_DIR}:/config:rw"
+    ports:
+      - "27961:${PORT}"
+    networks:
+      - ioquake3
+
+   ioquake3_ctf:
+    build:
+      context: .
+    container_name: ioquake3_ctf
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - MOTD
+      - RCON_PASS
+      - EXTRA_ARGS
+      - GAME_CFG=ctf.cfg
+    volumes:
+      - "${BASEQ3_DIR}:/quake/baseq3/:rw"
+      - "${CPMA_DIR}:/quake/cpma/:rw"
+      - "${CONFIG_DIR}:/config:rw"
+    ports:
+      - "27962:${PORT}"
+    networks:
+      - ioquake3
+
+   ioquake3_ist:
+    build:
+      context: .
+    container_name: ioquake3_ist
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - MOTD
+      - RCON_PASS
+      - EXTRA_ARGS
+      - GAME_CFG=ist.cfg
+    volumes:
+      - "${BASEQ3_DIR}:/quake/baseq3/:rw"
+      - "${CPMA_DIR}:/quake/cpma/:rw"
+      - "${CONFIG_DIR}:/config:rw"
+    ports:
+      - "27963:${PORT}"
+    networks:
+      - ioquake3
+
+   ioquake3_ra:
+    build:
+      context: .
+    container_name: ioquake3_ra
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - MOTD
+      - RCON_PASS
+      - EXTRA_ARGS
+      - GAME_CFG=ra.cfg
+    volumes:
+      - "${BASEQ3_DIR}:/quake/baseq3/:rw"
+      - "${CPMA_DIR}:/quake/cpma/:rw"
+      - "${CONFIG_DIR}:/config:rw"
+    ports:
+      - "27965:${PORT}"
+    networks:
+      - ioquake3
+      

@@ -1,0 +1,25 @@
+# This file is only loaded when a game mode with flags and items is active.
+# It allows you to override the distance metric of a given entity to fix up
+# its place in the list of timers and/or the team it belongs to.
+
+# If the server has loaded a custom item layout through a .map file,
+# the name in brackets is that of the .map file instead of the .bsp file,
+# without a leading exclamation mark (which is used for callvotes).
+# Example: if "cv map !q3wcp9fixed" passes, we look for "[q3wcp9fixed]" in this file
+# (provided "maps/q3wcp9fixed.map" exists and references a .bsp file that exists too)
+
+
+[q3wcp14]
+# fix up the 2 YAs in mid
+distance 189 -512
+distance  99  512
+
+[q3ctf4]
+# fix up the MH, 3 RLs, 2 YAs and BFG in mid
+distance 154 -510
+distance 163 -500
+distance 100   -1
+distance 164    0
+distance  93    1
+distance 103  500
+distance  94  510

@@ -1,0 +1,7 @@
+
+# the first map will be the one rotated to if the server is idle
+# entries are "mapname [minplayers] [maxplayers] [fraglimit] [timelimit]"
+
+q3dm17 00 16 20 20
+fabdm1 00 16 20 15
+fabdm2 00 16 30 20

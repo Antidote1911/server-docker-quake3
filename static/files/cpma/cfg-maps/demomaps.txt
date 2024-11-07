@@ -1,0 +1,13 @@
+# =====================================================================================
+# List of map overrides for demo playback
+# Format: original_map_name replacement_map_name
+#
+# Note: cpm3b_b2 will fix the missing teleporters
+# Note: cpm22b_b1 should be out shortly...
+# =====================================================================================
+
+#cpm3 cpm3b_b1
+#cpm3a cpm3b_b1
+cpm4 cpm4a
+cpm18 cpm18r
+#cpm22 cpm22b_b1
