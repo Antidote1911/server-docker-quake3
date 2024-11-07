@@ -30,6 +30,7 @@ RUN \
     addgroup -g 1337 quake && \
     adduser -D -h /home/quake -G quake -u 1337 quake && \
     mkdir -pv /home/quake/.q3a/baseq3 && \
+    mkdir -pv /home/quake/.q3a/cpma && \
     ln -sfv /config/common.cfg /home/quake/.q3a/baseq3/ && \
     ln -sfv /config/ra.cfg /home/quake/.q3a/baseq3/ && \
     ln -sfv /config/ist.cfg /home/quake/.q3a/baseq3/ && \
