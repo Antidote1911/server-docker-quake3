@@ -1,7 +1,3 @@
-networks:
-  ioquake3:
-    external: false
-
 services:
    ioquake3_ffa:
     build:
