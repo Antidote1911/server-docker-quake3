@@ -17,8 +17,6 @@ services:
       - "${CONFIG_DIR}:/config:rw"
     ports:
       - "27960:${PORT}"
-    networks:
-      - ioquake3
       
    ioquake3_tdm:
     build:
@@ -38,8 +36,6 @@ services:
       - "${CONFIG_DIR}:/config:rw"
     ports:
       - "27961:${PORT}"
-    networks:
-      - ioquake3
 
    ioquake3_ctf:
     build:
@@ -59,8 +55,6 @@ services:
       - "${CONFIG_DIR}:/config:rw"
     ports:
       - "27962:${PORT}"
-    networks:
-      - ioquake3
 
    ioquake3_ist:
     build:
@@ -80,8 +74,6 @@ services:
       - "${CONFIG_DIR}:/config:rw"
     ports:
       - "27963:${PORT}"
-    networks:
-      - ioquake3
 
    ioquake3_ra:
     build:
@@ -101,6 +93,5 @@ services:
       - "${CONFIG_DIR}:/config:rw"
     ports:
       - "27965:${PORT}"
-    networks:
-      - ioquake3
+
       
