@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/sh
 . /static/shell/common
 
 trap shutdown SIGTERM SIGINT
@@ -72,14 +72,23 @@ _ARGS="${_ARGS} +exec common.cfg"
 _ARGS="${_ARGS} +exec ${GAME_CFG}"
 _ARGS="${_ARGS} ${EXTRA_ARGS}"
 
-pinfo "setting permissions."
-chown -Rh quake:quake /config /home/quake
-evalret
 
 pinfo "ioq3ded.x86_64 cmdline args:"
 pinfo "${_ARGS}"
 
+pinfo "///////////////"
+ls /
+pinfo "///////////////"
+ls /quake/
+pinfo "///////////////"
+ls /quake/baseq3/
+pinfo "///////////////"
+
+pinfo "setting permissions."
+chown -Rh quake:quake /config /home/quake
+evalret
 
 su quake -c "/quake/ioq3ded.x86_64 ${_ARGS}" &
+#su quake -c "/quake/ioq3ded.x86_64 ${_ARGS}" &
 
 wait $!

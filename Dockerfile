@@ -1,5 +1,5 @@
 # build ioquake3
-FROM alpine:latest AS ioquake3-build
+FROM bitnami/minideb:latest AS ioquake3-build
 
 ENV \
     BUILD_STANDALONE=0 \
@@ -14,22 +14,18 @@ ENV \
     USE_CURL_DLOPEN=0 \
     USE_INTERNAL_LIBS=0
 
-RUN apk update \
-    && apk upgrade \
-    && apk --no-cache add \
-    curl g++ gcc make git zlib-dev
+RUN apt update && apt install -y ca-certificates curl build-essential git zlib1g-dev pkg-config && update-ca-certificates 
 
 RUN git clone https://github.com/ioquake/ioq3.git /ioq3 \
     && cd ioq3 \
     && make release
 
 # move the bins to the actual image
-FROM alpine:latest AS ioquake3
+FROM bitnami/minideb:latest AS ioquake3
 
-RUN \
-    addgroup -g 1337 quake && \
-    adduser -D -h /home/quake -G quake -u 1337 quake && \
-    mkdir -pv /home/quake/.q3a/baseq3 && \
+RUN groupadd -g 1337 quake && useradd -u 1337 -g quake -s /bin/sh quake
+
+RUN mkdir -pv /home/quake/.q3a/baseq3 && \
     mkdir -pv /home/quake/.q3a/cpma && \
     ln -sfv /config/common.cfg /home/quake/.q3a/baseq3/ && \
     ln -sfv /config/ra.cfg /home/quake/.q3a/baseq3/ && \
@@ -43,3 +39,4 @@ COPY static /static
 
 EXPOSE $PORT
 CMD /static/shell/entrypoint.sh
+
