@@ -14,7 +14,7 @@ ENV \
     USE_CURL_DLOPEN=0 \
     USE_INTERNAL_LIBS=0
 
-RUN apt update && apt install -y ca-certificates curl build-essential git zlib1g-dev pkg-config && update-ca-certificates 
+RUN apt update && apt install -y ca-certificates build-essential git zlib1g-dev pkg-config curl unzip && update-ca-certificates 
 
 RUN git clone https://github.com/ioquake/ioq3.git /ioq3 \
     && cd ioq3 \
