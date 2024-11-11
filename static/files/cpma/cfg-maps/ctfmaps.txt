@@ -2,7 +2,7 @@
 # the first map will be the one rotated to if the server is idle
 # entries are "mapname [minplayers] [maxplayers] [caplimit] [timelimit]"
 
-q3tourney6_ctf 00 12 3 20
+v-q3dm17_ctf 00 12 3 20
 cpmctf1 00 16 3 20
 q3ctf2 00 16 3 20
 cpmctf2	00 16 3 20

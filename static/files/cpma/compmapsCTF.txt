@@ -1,4 +1,4 @@
-q3tourney6_ctf
+v-q3dm17_ctf
 cpmctf1
 q3ctf2
 cpmctf2

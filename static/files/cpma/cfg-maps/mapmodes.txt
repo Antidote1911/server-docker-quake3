@@ -448,9 +448,9 @@ ump3ctf4 ctfs
 ump3ctf5 ctfs
 ump3ctf6 ctfs
 ump3ctf7 ctfs
-v-q3dm17_ctf ctfs
-v-q3dm17_ctf_a ctfs
-v-q3dm17_ctf_b ctfs
+v-q3dm17_ctf ctf ctfs
+v-q3dm17_ctf_a ctf ctfs
+v-q3dm17_ctf_b ctf ctfs
 vaals_b1 1v1 hm
 vaals_b2 1v1 hm
 vaals_b3 1v1 hm
