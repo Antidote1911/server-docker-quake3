@@ -75,23 +75,3 @@ services:
     ports:
       - "27963:${PORT}"
 
-   ioquake3_ra:
-    build:
-      context: .
-    container_name: ioquake3_ra
-    restart: unless-stopped
-    env_file:
-      - .env
-    environment:
-      - MOTD
-      - RCON_PASS
-      - EXTRA_ARGS
-      - GAME_CFG=ra.cfg
-    volumes:
-      - "${BASEQ3_DIR}:/quake/baseq3/:rw"
-      - "${CPMA_DIR}:/quake/cpma/:rw"
-      - "${CONFIG_DIR}:/config:rw"
-    ports:
-      - "27965:${PORT}"
-
-      

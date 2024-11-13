@@ -58,13 +58,6 @@ if [ ! -f "/config/ist.cfg" ]; then
     chmod -R 777 /config/ist.cfg
 fi
 
-if [ ! -f "/config/ra.cfg" ]; then
-    pwarn "/config/ra.cfg is missing."
-    pinfo "static files default ra config will be used."
-    cp "/static/files/base_ra.cfg" "/config/ra.cfg"
-    chmod -R 777 /config/ra.cfg
-fi
-
 sync
 # -- action -- #
 _ARGS="+set fs_game cpma"

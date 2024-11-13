@@ -31,7 +31,6 @@ RUN \
     adduser -D -h /home/quake -G quake -u 1337 quake && \
     mkdir -pv /home/quake/.q3a/baseq3 && \
     ln -sfv /config/common.cfg /home/quake/.q3a/baseq3/ && \
-    ln -sfv /config/ra.cfg /home/quake/.q3a/baseq3/ && \
     ln -sfv /config/ist.cfg /home/quake/.q3a/baseq3/ && \
     ln -sfv /config/ffa.cfg /home/quake/.q3a/baseq3/ && \
     ln -sfv /config/tdm.cfg /home/quake/.q3a/baseq3/ && \
